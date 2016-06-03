@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_bottom_layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:layout_gravity="bottom"
+    android:background="@color/bottom_green">
+
+    <Button
+        android:id="@+id/tab_grab_order"
+        style="@style/RadioButtonBottomTab"
+        android:text="抢单" />
+
+    <Button
+        android:id="@+id/tab_release_task"
+        style="@style/RadioButtonBottomTab"
+        android:drawableTop="@mipmap/add"
+        android:text="发布任务" />
+
+    <Button
+        android:id="@+id/tab_place_order"
+        style="@style/RadioButtonBottomTab"
+        android:text="下单" />
+
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/title_bar"
+        android:id="@+id/include"
+        />
+
+    <TextView
+        android:id="@+id/grabbed_order_content"
+        style="@style/TextViewBody"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="[宝安店]正新鸡排尊享套餐，建议单人使用"
+        android:layout_below="@+id/include"
+        />
+
+    <TextView
+        android:id="@+id/grabbed_order_price"
+        style="@style/TextViewBody"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="价格：1元"
+        android:layout_alignTop="@+id/time_grab_order"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/time_grab_order"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="交易中"
+        android:textSize="16sp"
+        android:textColor="@color/bottom_green"
+        android:background="@drawable/buttonstyle"
+        android:layout_below="@+id/grabbed_order_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        android:background="@color/bg_gray"
+        android:layout_below="@+id/grabbed_order_price"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp" />
+    <TextView
+        android:id="@+id/tv_store_address"
+        style="@style/TextViewBody"
+        android:textStyle="bold"
+        android:text="商家地址"
+        android:layout_below="@+id/ll_line"
+        />
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_gray"
+        android:layout_below="@+id/tv_store_address"
+        />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/map"
+        android:layout_below="@+id/horizontal_line"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/activity_address"
+        style="@style/TextViewBody"
+        android:textColor="@color/txt_gray"
+        android:textSize="15sp"
+        android:maxEms="14"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="宝安区宝安大道玉律路路口(近花样年.花郡)"
+        android:layout_below="@+id/horizontal_line"
+        android:layout_toRightOf="@+id/iv_address"
+        android:layout_toEndOf="@+id/iv_address" />
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="1px"
+        android:layout_height="30dp"
+        android:background="@color/divider_gray"
+        android:layout_alignTop="@+id/iv_phone"
+        android:layout_alignLeft="@+id/time_grab_order"
+        android:layout_alignStart="@+id/time_grab_order"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <ImageView
+        android:id="@+id/iv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/phone"
+        android:layout_alignTop="@+id/iv_address"
+        android:layout_alignRight="@+id/grabbed_order_content"
+        android:layout_alignEnd="@+id/grabbed_order_content" />
+
+    <View
+        android:id="@+id/horizontal_line6"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_gray"
+        android:layout_below="@+id/activity_address"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_line1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        android:background="@color/bg_gray"
+        android:layout_below="@+id/horizontal_line6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_below="@+id/ll_line1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_buy_title"
+            style="@style/TextViewBody"
+            android:textStyle="bold"
+            android:text="订单详情"
+            />
+
+        <View
+            android:id="@+id/horizontal_line3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_gray"
+            />
+
+        <TextView
+            android:id="@+id/order_number"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:text="订单号：3874384387"/>
+
+        <TextView
+            android:id="@+id/order_time"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:layout_marginTop="-8dp"
+            android:text="下单时间：2016-5-15 15:00"/>
+
+        <TextView
+            android:id="@+id/phone_number"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:layout_marginTop="-8dp"
+            android:text="购买手机号：15914148693"/>
+
+        <TextView
+            android:id="@+id/number"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:layout_marginTop="-8dp"
+            android:text="数量：1"/>
+
+        <TextView
+            android:id="@+id/total_price"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:layout_marginTop="-8dp"
+            android:layout_marginBottom="10dp"
+            android:text="总价：1元"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/bottom_green"
+                android:textColor="@drawable/txtcolor_white2oran_sel"
+                android:text="取消订单"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btn_determine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/tool_blue"
+                android:textColor="@drawable/txtcolor_white2oran_sel"
+                android:text="确认收货"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

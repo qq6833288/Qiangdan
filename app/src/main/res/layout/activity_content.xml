@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/title_bar"
+        android:id="@+id/include" />
+
+    <ImageView
+        android:id="@+id/content_avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/avatar"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/include"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        style="@style/TextViewBody"
+        android:padding="0dp"
+        android:textSize="18sp"
+        android:text="谢瓜"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/content_avatar"
+        />
+
+    <TextView
+        android:id="@+id/tv_activity_content"
+        style="@style/TextViewBody"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="[宝安店]正新鸡排尊享套餐，建议单人使用"
+        android:layout_below="@+id/content_avatar"
+        />
+
+    <TextView
+        android:id="@+id/tv_activity_price"
+        style="@style/TextViewBody"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="价格：1元"
+        android:layout_below="@+id/tv_activity_content"
+        android:layout_alignLeft="@+id/tv_activity_content"
+        android:layout_alignStart="@+id/tv_activity_content" />
+
+    <Button
+        android:id="@+id/time_grab_order"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:text="限时抢单"
+        android:textColor="@color/white"
+        android:background="@color/bottom_green"
+        android:layout_below="@+id/tv_activity_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_gray"
+        android:layout_below="@+id/tv_activity_price"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/map"
+        android:layout_below="@+id/horizontal_line"
+        android:layout_alignLeft="@+id/content_avatar"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/activity_address"
+        style="@style/TextViewBody"
+        android:textColor="@color/txt_gray"
+        android:textSize="15sp"
+        android:maxEms="14"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="宝安区宝安大道玉律路路口(近花样年.花郡)"
+        android:layout_alignTop="@+id/horizontal_line"
+        android:layout_toRightOf="@+id/iv_address" />
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="1px"
+        android:layout_height="30dp"
+        android:background="@color/divider_gray"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_alignBottom="@+id/iv_phone"
+        android:layout_toLeftOf="@+id/iv_phone"
+        android:layout_toStartOf="@+id/iv_phone" />
+
+    <ImageView
+        android:id="@+id/iv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/phone"
+        android:layout_alignTop="@+id/iv_address"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:id="@+id/horizontal_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_gray"
+        android:layout_below="@+id/activity_address"
+        android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="vertical"
+        android:background="@color/bg_gray"
+        android:layout_below="@+id/activity_address"
+        android:layout_alignRight="@+id/time_grab_order"
+        android:layout_alignEnd="@+id/time_grab_order" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_line"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_buy_title"
+            style="@style/TextViewBody"
+            android:textStyle="bold"
+            android:text="购买须知"
+            />
+
+        <View
+            android:id="@+id/horizontal_line3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_gray"
+            />
+
+        <TextView
+            android:id="@+id/valid_time"
+            style="@style/TextViewBody"
+            android:textColor="@color/bottom_green"
+            android:textSize="16sp"
+            android:text="有效期："/>
+
+        <TextView
+            android:id="@+id/valid_times"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:layout_marginTop="-8dp"
+            android:text="2016.5.15至2016.5.21"/>
+
+        <TextView
+            android:id="@+id/use_time"
+            style="@style/TextViewBody"
+            android:textColor="@color/bottom_green"
+            android:textSize="16sp"
+            android:layout_marginTop="-8dp"
+            android:text="使用时间："/>
+
+        <TextView
+            android:id="@+id/use_times"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:layout_marginTop="-8dp"
+            android:text="10:00-12:00，部分店铺看实际营业时间"/>
+
+        <TextView
+            android:id="@+id/use_rule"
+            style="@style/TextViewBody"
+            android:textColor="@color/bottom_green"
+            android:textSize="16sp"
+            android:layout_marginTop="-8dp"
+            android:text="使用规则："/>
+
+        <TextView
+            android:id="@+id/use_rules1"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:layout_marginTop="-8dp"
+            android:text="·无需预约，消费高峰时可能需要等位"/>
+
+        <TextView
+            android:id="@+id/use_rules2"
+            style="@style/TextViewBody"
+            android:textSize="16sp"
+            android:textColor="@color/txt_gray"
+            android:layout_marginTop="-8dp"
+            android:text="·每张单卷建议1人使用"/>
+
+        <View
+            android:id="@+id/horizontal_line4"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_gray"
+            android:layout_below="@+id/tv_activity_price"
+            />
+
+        <TextView
+            android:id="@+id/look_pictureText"
+            style="@style/TextViewBody"
+            android:textColor="@color/bottom_green"
+            android:textSize="16sp"
+            android:text="查看图文详情"/>
+
+        <View
+            android:id="@+id/horizontal_line5"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider_gray"
+            android:layout_below="@+id/tv_activity_price"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
